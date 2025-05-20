@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIT00 - Diseño</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-white">
+
+    <header class="bg-custom-header text-custom-header p-4 fixed w-full top-0 left-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html#hero" class="flex-shrink-0">
+                <img src="img/logo.jpg" alt="UNIT00 Logo" class="h-10 md:h-12">
+            </a>
+            <nav class="hidden md:flex items-center space-x-3 lg:space-x-5">
+                <div class="relative group">
+                    <button id="techServicesDropdownButton" data-key="menuTechServices"
+                        class="font-bold hover:text-gray-300 px-3 py-2 rounded-md text-sm dropdown-arrow">
+                        Servicios Tecnológicos
+                    </button>
+                    <div id="techServicesDropdown"
+                        class="absolute left-0 mt-2 w-72 origin-top-left bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden group-hover:block z-50 text-black">
+                        <div class="py-1" role="menu" aria-orientation="vertical"
+                            aria-labelledby="techServicesDropdownButton">
+                            <a href="index.html#servicio-ia" class="block px-4 py-2 text-sm hover:bg-gray-100"
+                                role="menuitem">Desarrollo de software IA</a>
+                            <a href="index.html#servicio-moviles" class="block px-4 py-2 text-sm hover:bg-gray-100"
+                                role="menuitem">Aplicaciones Móviles</a>
+                            <a href="index.html#servicio-infraestructura"
+                                class="block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">Infraestructura TI</a>
+                            <a href="index.html#servicio-nube" class="block px-4 py-2 text-sm hover:bg-gray-100"
+                                role="menuitem">Servicios de la nube</a>
+                            <a href="index.html#servicio-soporte" class="block px-4 py-2 text-sm hover:bg-gray-100"
+                                role="menuitem">Soporte y servicios</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="unitdiseno.html" data-key="menuMarketingDesign"
+                    class="font-bold hover:text-gray-300 px-3 py-2 rounded-md text-sm">Servicios de marketing y
+                    diseño</a>
+                <a href="#contacto" data-key="menuContact"
+                    class="font-bold hover:text-gray-300 px-3 py-2 rounded-md text-sm">Contacto</a>
+                <button id="langButton"
+                    class="font-bold bg-white text-gray-800 hover:bg-gray-200 px-3 py-1.5 rounded-md text-sm border border-gray-300">
+                    EN
+                </button>
+            </nav>
+            <div class="md:hidden">
+                <button id="mobileMenuButton" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="md:hidden hidden bg-custom-header border-t border-gray-700">
+            <div class="relative">
+                <button id="techServicesDropdownButtonMobile" data-key="menuTechServices"
+                    class="w-full text-left block px-4 py-2 text-sm font-bold text-white hover:bg-gray-700 dropdown-arrow">
+                    Servicios Tecnológicos
+                </button>
+                <div id="techServicesDropdownMobile" class="pl-4 hidden bg-gray-800">
+                    <a href="index.html#servicio-ia" class="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-600"
+                        role="menuitem">Desarrollo de software IA</a>
+                    <a href="index.html#servicio-moviles"
+                        class="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-600" role="menuitem">Aplicaciones
+                        Móviles</a>
+                    <a href="index.html#servicio-infraestructura"
+                        class="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-600" role="menuitem">Infraestructura
+                        TI</a>
+                    <a href="index.html#servicio-nube" class="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-600"
+                        role="menuitem">Servicios de la nube</a>
+                    <a href="index.html#servicio-soporte"
+                        class="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-600" role="menuitem">Soporte y
+                        servicios</a>
+                </div>
+            </div>
+            <a href="unitdiseno.html" data-key="menuMarketingDesign"
+                class="block px-4 py-2 text-sm font-bold text-white hover:bg-gray-700">Servicios de marketing y
+                diseño</a>
+            <a href="#contacto" data-key="menuContact"
+                class="block px-4 py-2 text-sm font-bold text-white hover:bg-gray-700">Contacto</a>
+            <button id="langButtonMobile"
+                class="w-full text-left block px-4 py-2 text-sm font-bold bg-white text-gray-800 hover:bg-gray-200">
+                EN
+            </button>
+        </div>
+    </header>
+
+    <main class="pt-16 md:pt-20">
+        <section id="hero" class="relative bg-cover bg-center flex items-center justify-center"
+            style="background-image: url('img/hero-background.jpeg'); height: 45vh;">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <h1 data-key="heroTitle"
+                class="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center z-10 relative px-4">
+                Unit00 Creando universos
+            </h1>
+        </section>
+
+        <section id="marketing-branding" class="py-12 md:py-16 bg-white">
+            <div class="container mx-auto px-0">
+                <!-- px-0 para que las cajas toquen los bordes del contenedor si es necesario -->
+                <h2 data-key="marketingDesignTitleFull"
+                    class="text-3xl font-bold text-center mb-10 md:mb-12 text-black px-4 sm:px-6 lg:px-8">Unit00
+                    Branding y marketing digital</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+                    <div class="bg-gray-100 p-6 md:p-8 flex flex-col justify-center">
+                        <h3 data-key="marketingDigitalSubTitle" class="text-2xl font-semibold mb-3 text-black">Marketing
+                            digital</h3>
+                        <p data-key="marketingText1" class="text-black">
+                            Unit00 ofrece los servicios de profesionales del marketing digital, creando campañas para
+                            redes sociales.
+                            Solo tienes que preocuparte en tu objetivo, Unit00 se encarga de lo demás, generación de
+                            imágenes, textos, estrategias, post, nosotros administramos completamente tu campaña.
+                        </p>
+                    </div>
+                    <div class="bg-gray-200 flex items-center justify-center">
+                        <img src="img/imagen-marketing-1.jpeg" alt="Marketing Digital Unit00"
+                            class="w-full h-full object-cover min-h-[250px] md:min-h-full">
+                    </div>
+                    <div class="bg-image-custom-box bg-gray-200"
+                        style="background-image: url('img/imagen-marketing-2.jpeg');">
+                        <!-- Contenido opcional aquí -->
+                    </div>
+                    <div class="bg-gray-100 p-6 md:p-8 flex flex-col justify-center">
+                        <h3 data-key="brandingTitle" class="text-2xl font-semibold mb-3 text-black">Branding</h3>
+                        <p data-key="brandingText1" class="text-black">
+                            Unit00 te ayuda a crear o potencializar tu marca, no importa si es nueva o tiene años en el
+                            mercado, es sumamente importante mantener una marca que cause impacto en las personas,
+                            mediante nuestros expertos te apoyamos con servicios tales como,
+                            Generación de marca, diseño gráfico para la generación de Logotipos, manual de identidad,
+                            presencia web, redes sociales, entre otros.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacto" class="bg-custom-footer text-custom-footer py-10 md:py-12 px-4 sm:px-6 lg:px-8">
+        <!-- Footer es idéntico al de index.html -->
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+            <div>
+                <h3 data-key="footerContactTitle" class="text-lg font-semibold mb-4">Contacto UNIT00</h3>
+                <p class="mb-2"><strong data-key="footerPhone">Teléfono:</strong> <a href="tel:+1234567890"
+                        class="hover:text-gray-300">+1 (234) 567-890</a></p>
+                <p class="mb-2"><strong data-key="footerEmail">Correo Electrónico:</strong> <a
+                        href="mailto:contacto@unit00.co" class="hover:text-gray-300">contacto@unit00.co</a></p>
+                <a href="mailto:contacto@unit00.co" data-key="footerSendEmailOption"
+                    class="inline-block mt-2 bg-custom-footer-btn hover-bg-custom-footer-btn text-white font-bold py-2 px-4 rounded-md transition duration-150">Envía
+                    un correo electrónico</a>
+            </div>
+            <div class="md:col-span-1 lg:col-span-1">
+                <h3 data-key="footerSendMessageTitle" class="text-lg font-semibold mb-4">Envíanos un mensaje</h3>
+                <form action="#" method="POST">
+                    <div class="mb-4">
+                        <label for="email_footer_design_form" class="sr-only" data-key="footerYourEmail">Tu correo
+                            electrónico</label>
+                        <input type="email" name="email_footer_design_form" id="email_footer_design_form"
+                            class="mt-1 block w-full bg-gray-700 border border-gray-600 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm text-white placeholder-gray-400"
+                            data-key="footerYourEmailPlaceholder" placeholder="Tu correo electrónico">
+                    </div>
+                    <div class="mb-4">
+                        <label for="message_footer_design_form" class="sr-only" data-key="footerMessage">Mensaje</label>
+                        <textarea id="message_footer_design_form" name="message_footer_design_form" rows="3"
+                            class="mt-1 block w-full bg-gray-700 border border-gray-600 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm text-white placeholder-gray-400"
+                            data-key="footerMessagePlaceholder" placeholder="Mensaje"></textarea>
+                    </div>
+                    <button type="submit" data-key="footerSendButton"
+                        class="w-full bg-custom-footer-btn hover-bg-custom-footer-btn text-white font-bold py-2 px-4 rounded-md transition duration-150 ease-in-out">
+                        Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+            <div class="text-center md:text-right">
+                <a href="index.html#hero" class="text-2xl font-bold text-white">UNIT00</a>
+                <p class="mt-2 text-sm" data-key="footerAllRights">© <span id="currentYear"></span> Unit00. Todos los
+                    derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollToTopBtn" title="Volver arriba"
+        class="scroll-to-top-btn hidden fixed bottom-5 right-5 bg-custom-footer-btn hover-bg-custom-footer-btn text-white p-3 rounded-full shadow-lg z-40">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

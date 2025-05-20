@@ -1,0 +1,81 @@
+/* css/style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    /* Puedes cambiar esto si lo deseas */
+}
+
+/* Colores personalizados basados en los requisitos */
+.bg-custom-header {
+    background-color: #000000;
+}
+
+/* Negro */
+.text-custom-header {
+    color: white;
+}
+
+/* Tailwind ya tiene 'font-bold' para negritas */
+
+.bg-custom-card {
+    background-color: #ddd9d8;
+}
+
+.text-custom-card-content {
+    color: black;
+}
+
+.bg-custom-card-btn {
+    background-color: #d03636;
+}
+
+.hover-bg-custom-card-btn:hover {
+    background-color: #b02a2a;
+}
+
+/* Un tono más oscuro para hover */
+
+
+.bg-custom-footer {
+    background-color: #000000;
+}
+
+/* Negro */
+.text-custom-footer {
+    color: white;
+}
+
+.bg-custom-footer-btn {
+    background-color: #d03636;
+}
+
+.hover-bg-custom-footer-btn:hover {
+    background-color: #b02a2a;
+}
+
+/* Un tono más oscuro para hover */
+
+
+/* Para la imagen de fondo de la caja en unitdiseno.html */
+.bg-image-custom-box {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 250px;
+    /* Ajusta según necesites */
+}
+
+/* Estilos para el menú desplegable y scroll-to-top (de la versión anterior, son útiles) */
+.dropdown-arrow::after {
+    content: ' ▼';
+    font-size: 0.7em;
+    margin-left: 4px;
+}
+
+.scroll-to-top-btn {
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.scroll-to-top-btn.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
