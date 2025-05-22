@@ -1,81 +1,112 @@
-/* css/style.css */
+/* Estilos base si son necesarios fuera de Tailwind */
 body {
-    font-family: 'Arial', sans-serif;
-    /* Puedes cambiar esto si lo deseas */
+    scroll-behavior: smooth;
+    /* Para el scroll suave de los anclajes */
 }
 
-/* Colores personalizados basados en los requisitos */
-.bg-custom-header {
-    background-color: #000000;
-}
-
-/* Negro */
-.text-custom-header {
-    color: white;
-}
-
-/* Tailwind ya tiene 'font-bold' para negritas */
-
-.bg-custom-card {
-    background-color: #ddd9d8;
-}
-
-.text-custom-card-content {
-    color: black;
-}
-
-.bg-custom-card-btn {
-    background-color: #d03636;
-}
-
-.hover-bg-custom-card-btn:hover {
-    background-color: #b02a2a;
-}
-
-/* Un tono más oscuro para hover */
-
-
-.bg-custom-footer {
-    background-color: #000000;
-}
-
-/* Negro */
-.text-custom-footer {
-    color: white;
-}
-
-.bg-custom-footer-btn {
-    background-color: #d03636;
-}
-
-.hover-bg-custom-footer-btn:hover {
-    background-color: #b02a2a;
-}
-
-/* Un tono más oscuro para hover */
-
-
-/* Para la imagen de fondo de la caja en unitdiseno.html */
-.bg-image-custom-box {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 250px;
-    /* Ajusta según necesites */
-}
-
-/* Estilos para el menú desplegable y scroll-to-top (de la versión anterior, son útiles) */
-.dropdown-arrow::after {
-    content: ' ▼';
-    font-size: 0.7em;
-    margin-left: 4px;
-}
-
-.scroll-to-top-btn {
-    transition: opacity 0.3s, visibility 0.3s;
-}
-
-.scroll-to-top-btn.hidden {
+/* Animaciones Hero */
+.hero-text-left,
+.hero-text-right,
+.hero-button {
     opacity: 0;
-    visibility: hidden;
+    transition-property: opacity, transform;
+    transition-timing-function: ease-out;
+}
+
+.hero-text-left {
+    transform: translateX(-50%);
+    transition-duration: 1.5s;
+}
+
+.hero-text-right {
+    transform: translateX(50%);
+    transition-duration: 1.5s;
+}
+
+.hero-button {
+    transform: translateY(50px);
+    transition-duration: 1.5s;
+    transition-delay: 0.3s;
+    /* Pequeño retraso para el botón */
+}
+
+#hero.animate .hero-text-left,
+#hero.animate .hero-text-right,
+#hero.animate .hero-button {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+/* Animaciones Sección Presentación */
+.presentation-text-container,
+.presentation-image {
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-timing-function: ease-out;
+}
+
+.presentation-text-container {
+    transform: translateY(-50px);
+    transition-duration: 1.2s;
+}
+
+.presentation-image {
+    transition-duration: 2s;
+    /* Opacidad progresiva */
+}
+
+#presentation.animate .presentation-text-container {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#presentation.animate .presentation-image {
+    opacity: 1;
+}
+
+/* Animaciones Sección Marketing y Branding (Diagonal) */
+.marketing-box {
+    opacity: 0;
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.marketing-box-tl {
+    transform: translate(-50%, -50%) scale(0.8);
+}
+
+.marketing-box-tr {
+    transform: translate(50%, -50%) scale(0.8);
+}
+
+.marketing-box-bl {
+    transform: translate(-50%, 50%) scale(0.8);
+}
+
+.marketing-box-br {
+    transform: translate(50%, 50%) scale(0.8);
+}
+
+#marketing-branding.animate .marketing-box {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}
+
+/* Dropdown con retraso - Tailwind group-hover se encarga de mostrar/ocultar,
+   JS puede añadir un retraso si es estrictamente necesario para el 'aparecer',
+   pero group-hover con transition-delay es más CSS-puro */
+#tech-dropdown {
+    /* opacity: 0; (ya en línea) */
+    /* pointer-events: none; (ya en línea) */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateY(10px);
+    /* Efecto sutil de aparición */
+}
+
+.group:hover #tech-dropdown {
+    /* opacity: 1; (ya en línea) */
+    /* pointer-events: auto; (ya en línea) */
+    transition-delay: 0.5s;
+    /* Retraso para MOSTRAR */
+    transform: translateY(0);
 }
